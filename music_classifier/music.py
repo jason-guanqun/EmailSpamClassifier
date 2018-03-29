@@ -11,14 +11,15 @@ from keras.utils import plot_model
 
 data=sio.loadmat("MSdata.mat")
 
-readx=data['trainx']
-ready=data['trainy']
+x_sample=data['trainx']
+y_sample=data['trainy']
 testx=data['testx']
 
-idx = np.random.choice(np.arange(readx.shape[0]), readx.shape[0], replace=False)
-x_sample = readx[idx]
-y_sample = ready[idx]
-y_sample = y_sample[:,0]
+# No need to sample
+# idx = np.random.choice(np.arange(readx.shape[0]), readx.shape[0], replace=False)
+# x_sample = readx[idx]
+# y_sample = ready[idx]
+# y_sample = y_sample[:,0]
 
 # trainx=x_sample[0:(int(0.9*x_sample.shape[0]))]
 # trainy=y_sample[0:(int(0.9*y_sample.shape[0]))]
